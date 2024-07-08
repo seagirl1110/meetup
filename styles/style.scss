@@ -2,4 +2,140 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin flex-container($justify: center) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+}
+
+@mixin btn {
+    @include flex-container;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.header {
+    @include flex-container(space-between);
+    gap: 15px 40px;
+    flex-wrap: wrap;
+    padding: 11px 50px 11px 24px;
+
+    @media screen and (max-width: 976.9px) {
+        padding-right: 24px;
+    }
+
+    @media screen and (max-width: 545.9px) {
+        padding: 4px 7px 4px 24px;
+        column-gap: 30px;
+    }
+
+    .logo {
+        /* .logo__link */
+
+        &__link {
+            @include flex-container;
+        }
+    }
+
+    .search-form {
+        @include flex-container(start);
+        flex-grow: 1;
+
+        @media screen and (max-width: 950.9px) {
+            order: 2;
+        }
+
+        @mixin form-text {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.17;
+        }
+
+        /* .search-form__input-events */
+        /* .search-form__input-location */
+
+        &__input-events,
+        &__input-location {
+            @include form-text;
+            border: 1px solid #d9d9d9;
+            outline: none;
+            padding: 13px 17px;
+            height: 42px;
+            color: #000000;
+
+            &::placeholder {
+                @include form-text;
+                color: #707070;
+            }
+        }
+
+        /* .search-form__input-events */
+
+        &__input-events {
+            border-radius: 8px 0px 0px 8px;
+            background-image: url("./../assets/icons/header_search_events.svg");
+            background-repeat: no-repeat;
+            background-position: 10px 10px;
+            padding-left: 37px;
+            flex-basis: 300px;
+        }
+
+        /* .search-form__input-location */
+
+        &__input-location {
+            border-left: none;
+            border-right: none;
+            flex-basis: 254px;
+
+            @media screen and (max-width: 545.9px) {
+                display: none;
+            }
+        }
+
+        /* .search-form__btn-submit */
+
+        &__btn-submit {
+            @include btn;
+            width: 42px;
+            height: 42px;
+            border-radius: 0px 8px 8px 0px;
+            background-color: #f65858;
+            flex-shrink: 0;
+        }
+    }
+
+    .actions {
+        @include flex-container;
+        gap: 22px;
+
+        @mixin actions-btn($color: #212121, $bg-color: #ffffff) {
+            @include btn;
+            padding: 8px 0;
+            height: 36px;
+            gap: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.43;
+            color: $color;
+            background-color: $bg-color;
+            border-radius: 8px;
+        }
+
+        .btn-languages,
+        .btn-logIn {
+            @include actions-btn();
+        }
+
+        .btn-signUp {
+            @include actions-btn(#ffffff, #00798a);
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
 }
