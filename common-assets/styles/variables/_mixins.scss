@@ -1,0 +1,12 @@
+@mixin flex-container($justify: center) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+}
+
+@mixin btn {
+    @include flex-container;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

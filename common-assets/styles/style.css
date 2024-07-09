@@ -15,20 +15,25 @@
   flex-wrap: wrap;
   padding: 11px 50px 11px 24px;
 }
-@media screen and (max-width: 976.9px) {
+@media screen and (max-width: 1024.9px) {
   .header {
     padding-right: 24px;
   }
 }
 @media screen and (max-width: 545.9px) {
   .header {
-    padding: 4px 7px 4px 24px;
+    padding: 4px 7px 4px 20px;
     -moz-column-gap: 30px;
          column-gap: 30px;
   }
 }
 .header .logo {
   /* .logo__link */
+}
+@media screen and (max-width: 545.9px) {
+  .header .logo {
+    padding-left: 4px;
+  }
 }
 .header .logo__link {
   display: flex;
@@ -75,7 +80,7 @@
 }
 .header .search-form__input-events {
   border-radius: 8px 0px 0px 8px;
-  background-image: url("./../assets/icons/header_search_events.svg");
+  background-image: url("./../icons/header_search_events.svg");
   background-repeat: no-repeat;
   background-position: 10px 10px;
   padding-left: 37px;

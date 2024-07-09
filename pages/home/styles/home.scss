@@ -1,0 +1,94 @@
+@use "./../variables/mixins" as mixins;
+
+.main-container {
+    width: 100%;
+    max-width: 1244px;
+    padding: 0 24px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    @media screen and (max-width: 425.9px) {
+        padding: 0 15px;
+        gap: 20px;
+    }
+}
+
+.banner {
+    @include mixins.flex-container(start);
+    gap: 46px;
+    padding: 71px 0 38px;
+
+    @media screen and (max-width: 925.9px) {
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 425.9px) {
+        padding: 19px 0 0 6px;
+        gap: 10px;
+    }
+
+    /* .banner__content */
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        color: #212121;
+        max-width: 580px;
+
+        @media screen and (max-width: 425.9px) {
+            gap: 20px;
+        }
+    }
+
+    /* .banner__title */
+
+    &__title {
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 1.24;
+
+        @media screen and (max-width: 425.9px) {
+            font-size: 25px;
+        }
+    }
+
+    /* .banner__text */
+
+    &__text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+
+        @media screen and (max-width: 425.9px) {
+            font-size: 12px;
+        }
+    }
+
+    /* .banner__btn */
+
+    &__btn {
+        @include mixins.btn;
+        width: 125px;
+        height: 40px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #00798a;
+    }
+
+    /* .banner__img */
+
+    &__img {
+        max-width: 379px;
+
+        @media screen and (max-width: 425.9px) {
+            max-width: 215px;
+        }
+    }
+}

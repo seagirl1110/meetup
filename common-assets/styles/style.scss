@@ -1,3 +1,5 @@
+@use "./variables/mixins" as mixins;
+
 * {
     margin: 0;
     padding: 0;
@@ -7,44 +9,35 @@
     font-style: normal;
 }
 
-@mixin flex-container($justify: center) {
-    display: flex;
-    align-items: center;
-    justify-content: $justify;
-}
-
-@mixin btn {
-    @include flex-container;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
 .header {
-    @include flex-container(space-between);
+    @include mixins.flex-container(space-between);
     gap: 15px 40px;
     flex-wrap: wrap;
     padding: 11px 50px 11px 24px;
 
-    @media screen and (max-width: 976.9px) {
+    @media screen and (max-width: 1024.9px) {
         padding-right: 24px;
     }
 
     @media screen and (max-width: 545.9px) {
-        padding: 4px 7px 4px 24px;
+        padding: 4px 7px 4px 20px;
         column-gap: 30px;
     }
 
     .logo {
+        @media screen and (max-width: 545.9px) {
+            padding-left: 4px;
+        }
+
         /* .logo__link */
 
         &__link {
-            @include flex-container;
+            @include mixins.flex-container;
         }
     }
 
     .search-form {
-        @include flex-container(start);
+        @include mixins.flex-container(start);
         flex-grow: 1;
 
         @media screen and (max-width: 950.9px) {
@@ -79,7 +72,7 @@
 
         &__input-events {
             border-radius: 8px 0px 0px 8px;
-            background-image: url("./../assets/icons/header_search_events.svg");
+            background-image: url("./../icons/header_search_events.svg");
             background-repeat: no-repeat;
             background-position: 10px 10px;
             padding-left: 37px;
@@ -101,7 +94,7 @@
         /* .search-form__btn-submit */
 
         &__btn-submit {
-            @include btn;
+            @include mixins.btn;
             width: 42px;
             height: 42px;
             border-radius: 0px 8px 8px 0px;
@@ -111,11 +104,11 @@
     }
 
     .actions {
-        @include flex-container;
+        @include mixins.flex-container;
         gap: 22px;
 
         @mixin actions-btn($color: #212121, $bg-color: #ffffff) {
-            @include btn;
+            @include mixins.btn;
             padding: 8px 0;
             height: 36px;
             gap: 4px;

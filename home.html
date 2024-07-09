@@ -10,14 +10,15 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="common-assets/styles/style.css" />
+    <link rel="stylesheet" href="pages/home/styles/home.css" />
   </head>
   <body>
     <header class="header">
       <div class="logo">
-        <a href="./index.html" class="logo__link">
+        <a href="./home.html" class="logo__link">
           <img
-            src="assets/icons/logo.svg"
+            src="common-assets/icons/logo.svg"
             alt="logo_meetup"
             class="logo__img"
           />
@@ -38,20 +39,41 @@
         />
         <button type="submit" class="search-form__btn-submit">
           <img
-            src="assets/icons/header_search_btn.svg"
+            src="common-assets/icons/header_search_btn.svg"
             alt="search_btn_submit"
           />
         </button>
       </form>
       <div class="actions">
         <button class="btn-languages">
-          <img src="assets/icons/header_languages.svg" alt="languages" />
+          <img src="common-assets/icons/header_languages.svg" alt="languages" />
           English
         </button>
         <button class="btn-logIn">Log in</button>
         <button class="btn-signUp">Sign up</button>
       </div>
     </header>
-    <script src="scripts/index.js"></script>
+    <main class="main-container">
+      <section class="banner">
+        <div class="banner__content">
+          <h1 class="banner__title">
+            The people platform—Where interests become friendships
+          </h1>
+          <p class="banner__text">
+            Whatever your interest, from hiking and reading to networking and
+            skill sharing, there are thousands of people who share it on Meetup.
+            Events are happening every day—sign up to join the fun.
+          </p>
+          <a href="./pages/events/events.html" class="banner__btn"
+            >Join Meetup</a
+          >
+        </div>
+        <img
+          src="pages/home/assets/icons/banner.svg"
+          alt="meetup_banner"
+          class="banner__img"
+        />
+      </section>
+    </main>
   </body>
 </html>
