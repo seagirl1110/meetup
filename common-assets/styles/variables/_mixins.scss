@@ -4,6 +4,12 @@
     justify-content: $justify;
 }
 
+@mixin flex-container-column($gap: 5px) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
 @mixin btn {
     @include flex-container;
     border: none;

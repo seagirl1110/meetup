@@ -1,13 +1,11 @@
-@use "./../variables/mixins" as mixins;
+@use "./../../../common-assets/styles/variables/mixins" as mixins;
 
 .main-container {
+    @include mixins.flex-container-column(64px);
     width: 100%;
     max-width: 1244px;
     padding: 0 24px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 64px;
 
     @media screen and (max-width: 425.9px) {
         padding: 0 15px;
@@ -32,9 +30,7 @@
     /* .banner__content */
 
     &__content {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
+        @include mixins.flex-container-column(24px);
         color: #212121;
         max-width: 580px;
 
@@ -89,6 +85,104 @@
 
         @media screen and (max-width: 425.9px) {
             max-width: 215px;
+        }
+    }
+}
+
+.events {
+    @include mixins.flex-container-column(24px);
+
+    /* .events__info */
+
+    &__info {
+        @include mixins.flex-container(start);
+        gap: 16px;
+    }
+
+    /* .events__title */
+
+    &__title {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 1.29;
+        color: #212121;
+
+        @media screen and (max-width: 768.9px) {
+            font-size: 20px;
+        }
+    }
+
+    /* .events__btn-location */
+
+    &__btn-location {
+        @include mixins.btn;
+        gap: 10px;
+        background-color: rgba(151, 202, 209, 0.12);
+        color: #00798a;
+        border-radius: 8px;
+        padding: 10px 12px;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.2;
+
+        @media screen and (max-width: 768.9px) {
+            font-size: 14px;
+        }
+    }
+
+    /* .events__link */
+
+    &__link {
+        margin-left: auto;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #00798a;
+        text-decoration: none;
+
+        @media screen and (max-width: 768.9px) {
+            display: none;
+        }
+    }
+
+    /* .events__list */
+
+    &__list {
+        .event {
+            /* .event__img */
+
+            &__img {
+            }
+
+            /* .event__type */
+
+            &__type {
+            }
+
+            /* .event__title */
+
+            &__title {
+            }
+
+            /* .event__category */
+
+            &__category {
+            }
+
+            /* .event__date */
+
+            &__date {
+            }
+
+            /* .event__attendees */
+
+            &__attendees {
+            }
+
+            /* .event__cost */
+
+            &__cost {
+            }
         }
     }
 }
