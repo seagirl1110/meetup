@@ -11,9 +11,14 @@
     gap: $gap;
 }
 
-@mixin btn {
+@mixin btn($width, $height, $color, $bg-color) {
     @include flex-container;
     border: none;
     outline: none;
     cursor: pointer;
+    border-radius: 8px;
+    width: $width;
+    height: $height;
+    color: $color;
+    background-color: $bg-color;
 }
