@@ -1,7 +1,8 @@
-@mixin flex-container($justify: center) {
+@mixin flex-container($gap: 0, $justify: center) {
     display: flex;
     align-items: center;
     justify-content: $justify;
+    gap: $gap;
 }
 
 @mixin flex-container-column($gap: 5px) {
