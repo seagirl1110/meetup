@@ -441,3 +441,71 @@
         }
     }
 }
+
+.cities {
+    @include mixins.flex-container-column(16px);
+
+    /* .cities__title */
+
+    &__title {
+        @include mixins.section-title;
+    }
+
+    /* .cities__text */
+
+    &__text {
+        font-size: 16px;
+        line-height: 24px;
+        color: #707070;
+
+        @media screen and (max-width: 425.9px) {
+            font-size: 12px;
+        }
+    }
+
+    /* .cities__wrapper */
+
+    &__wrapper {
+        @include mixins.flex-container(42px);
+        flex-wrap: wrap;
+        margin-top: 12px;
+    }
+
+    .city {
+        @include mixins.flex-container-column(24px);
+        align-items: center;
+
+        /* .city:nth-child(n + 5) */
+
+        &:nth-child(n + 5) {
+            @media screen and (max-width: 607.9px) {
+                display: none;
+            }
+        }
+
+        /* .city__img */
+
+        &__img {
+            width: 205px;
+            height: 205px;
+
+            @media screen and (max-width: 768.9px) {
+                width: 153px;
+                height: 153px;
+            }
+        }
+
+        /* .city__title */
+
+        &__title {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.4;
+            color: #212121;
+
+            @media screen and (max-width: 425.9px) {
+                font-size: 15px;
+            }
+        }
+    }
+}
