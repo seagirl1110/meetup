@@ -22,3 +22,14 @@
     color: $color;
     background-color: $bg-color;
 }
+
+@mixin section-title {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.29;
+    color: #212121;
+
+    @media screen and (max-width: 768.9px) {
+        font-size: 20px;
+    }
+}
