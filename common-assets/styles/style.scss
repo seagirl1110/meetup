@@ -100,11 +100,11 @@
         /* .search-form__btn-submit */
 
         &__btn-submit {
-            @include mixins.btn(42px, 42px, #f65858);
+            @include mixins.btn(42px, 42px, #ffffff, #f65858);
             border-radius: 0px 8px 8px 0px;
             flex-shrink: 0;
 
-            @media screen and (max-width: 950.9px) {
+            @media screen and (max-width: 545.9px) {
                 margin-right: 23px;
             }
         }

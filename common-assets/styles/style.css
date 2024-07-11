@@ -60,7 +60,6 @@
 }
 .header .search-form__input-events, .header .search-form__input-location {
   font-size: 16px;
-  font-weight: 400;
   line-height: 1.17;
   border: 1px solid #d9d9d9;
   outline: none;
@@ -70,13 +69,11 @@
 }
 .header .search-form__input-events::-moz-placeholder, .header .search-form__input-location::-moz-placeholder {
   font-size: 16px;
-  font-weight: 400;
   line-height: 1.17;
   color: #707070;
 }
 .header .search-form__input-events::placeholder, .header .search-form__input-location::placeholder {
   font-size: 16px;
-  font-weight: 400;
   line-height: 1.17;
   color: #707070;
 }
@@ -116,13 +113,15 @@
   border: none;
   outline: none;
   cursor: pointer;
+  border-radius: 8px;
   width: 42px;
   height: 42px;
-  border-radius: 0px 8px 8px 0px;
+  color: #ffffff;
   background-color: #f65858;
+  border-radius: 0px 8px 8px 0px;
   flex-shrink: 0;
 }
-@media screen and (max-width: 950.9px) {
+@media screen and (max-width: 545.9px) {
   .header .search-form__btn-submit {
     margin-right: 23px;
   }
@@ -142,15 +141,16 @@
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 8px 0;
+  border-radius: 8px;
+  width: auto;
   height: 36px;
+  color: #212121;
+  background-color: #ffffff;
+  padding: 8px 0;
   gap: 4px;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.43;
-  color: #212121;
-  background-color: #ffffff;
-  border-radius: 8px;
 }
 .header .actions .btn-signUp {
   display: flex;
@@ -160,15 +160,16 @@
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 8px 0;
+  border-radius: 8px;
+  width: auto;
   height: 36px;
+  color: #ffffff;
+  background-color: #00798a;
+  padding: 8px 0;
   gap: 4px;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.43;
-  color: #ffffff;
-  background-color: #00798a;
-  border-radius: 8px;
   padding-left: 16px;
   padding-right: 16px;
 }/*# sourceMappingURL=style.css.map */
