@@ -116,7 +116,7 @@
   line-height: 1.29;
   color: #212121;
 }
-@media screen and (max-width: 768.9px) {
+@media screen and (max-width: 393.9px) {
   .events__title {
     font-size: 20px;
   }
@@ -381,7 +381,7 @@
   line-height: 1.29;
   color: #212121;
 }
-@media screen and (max-width: 768.9px) {
+@media screen and (max-width: 393.9px) {
   .join__title {
     font-size: 20px;
   }
@@ -455,7 +455,7 @@
   line-height: 1.29;
   color: #212121;
 }
-@media screen and (max-width: 768.9px) {
+@media screen and (max-width: 393.9px) {
   .categories__title {
     font-size: 20px;
   }
@@ -506,7 +506,7 @@
   line-height: 1.29;
   color: #212121;
 }
-@media screen and (max-width: 768.9px) {
+@media screen and (max-width: 393.9px) {
   .cities__title {
     font-size: 20px;
   }
@@ -578,7 +578,7 @@
   line-height: 1.29;
   color: #212121;
 }
-@media screen and (max-width: 768.9px) {
+@media screen and (max-width: 393.9px) {
   .works__title {
     font-size: 20px;
   }
@@ -590,6 +590,11 @@
   gap: 12px 32px;
   align-items: stretch;
 }
+@media screen and (max-width: 768.9px) {
+  .works__wrapper {
+    flex-direction: column;
+  }
+}
 .works .work-info {
   background-color: rgba(151, 202, 209, 0.08);
   color: #212121;
@@ -598,24 +603,54 @@
   gap: 24px;
   grid-template-columns: 41px auto;
   padding: 32px 24px 24px;
-  max-width: 580px;
+  flex: 0 1 580px;
   /* .work-info__icon */
   /* .work-info__title */
   /* .work-info__text */
   /* .work-info__link */
 }
+@media screen and (max-width: 768.9px) {
+  .works .work-info {
+    flex-basis: auto;
+  }
+}
+@media screen and (max-width: 393.9px) {
+  .works .work-info {
+    gap: 10px 15px;
+    grid-template-columns: 25px auto;
+    padding: 20px 15px 15px;
+  }
+}
 .works .work-info__icon {
   grid-row-start: 1;
   grid-row-end: 4;
+  width: 41px;
+  height: 41px;
+}
+@media screen and (max-width: 393.9px) {
+  .works .work-info__icon {
+    width: 25px;
+    height: 25px;
+  }
 }
 .works .work-info__title {
   font-size: 20px;
   font-weight: 600;
   line-height: 1.2;
 }
+@media screen and (max-width: 393.9px) {
+  .works .work-info__title {
+    font-size: 12px;
+  }
+}
 .works .work-info__text {
   font-size: 16px;
   line-height: 1.5;
+}
+@media screen and (max-width: 393.9px) {
+  .works .work-info__text {
+    font-size: 10px;
+  }
 }
 .works .work-info__link {
   font-size: 16px;
@@ -623,4 +658,104 @@
   line-height: 1.5;
   color: #00798a;
   text-decoration: none;
+}
+@media screen and (max-width: 393.9px) {
+  .works .work-info__link {
+    font-size: 10px;
+  }
+}
+
+.friendsheeps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  /* .friendsheeps__title */
+  /* .friendsheeps__text */
+  /* .friendsheeps__wrapper */
+}
+.friendsheeps__title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.29;
+  color: #212121;
+}
+@media screen and (max-width: 393.9px) {
+  .friendsheeps__title {
+    font-size: 20px;
+  }
+}
+.friendsheeps__text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #707070;
+}
+@media screen and (max-width: 393.9px) {
+  .friendsheeps__text {
+    display: none;
+  }
+}
+.friendsheeps__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.friendsheeps .article {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-basis: 376px;
+  /* .article__img */
+  /* .article__title */
+  /* .article__text */
+  /* .article__link */
+}
+.friendsheeps .article__img {
+  width: 376px;
+  height: 191px;
+}
+@media screen and (max-width: 425.9px) {
+  .friendsheeps .article__img {
+    width: 364px;
+    height: 185px;
+  }
+}
+.friendsheeps .article__title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.55;
+  max-width: 300px;
+  margin-top: 12px;
+}
+@media screen and (max-width: 393.9px) {
+  .friendsheeps .article__title {
+    font-size: 16px;
+  }
+}
+.friendsheeps .article__text {
+  font-size: 16px;
+  line-height: 1.5;
+}
+@media screen and (max-width: 393.9px) {
+  .friendsheeps .article__text {
+    font-size: 12px;
+  }
+}
+.friendsheeps .article__link {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #00798a;
+  text-decoration: none;
+  font-weight: 400;
+  margin-top: 4px;
+}
+@media screen and (max-width: 393.9px) {
+  .friendsheeps .article__link {
+    font-size: 12px;
+    line-height: 23px;
+  }
 }/*# sourceMappingURL=home.css.map */
