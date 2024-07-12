@@ -147,12 +147,12 @@
   }
 }
 .events__link {
-  margin-left: auto;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   color: #00798a;
   text-decoration: none;
+  margin-left: auto;
 }
 @media screen and (max-width: 644.9px) {
   .events__link {
@@ -343,11 +343,12 @@
 }
 
 .join {
+  background-color: rgba(151, 202, 209, 0.08);
+  color: #212121;
+  border-radius: 8px;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 16px 57px;
-  color: #212121;
-  background-color: rgba(151, 202, 209, 0.08);
   padding: 20px 56px;
   /* .join__content */
   /* .join__title */
@@ -467,6 +468,9 @@
   flex-wrap: wrap;
 }
 .categories .category {
+  background-color: rgba(151, 202, 209, 0.08);
+  color: #212121;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -474,7 +478,6 @@
   width: 135px;
   height: 112px;
   padding: 22px 22px 11px;
-  background-color: rgba(151, 202, 209, 0.08);
   /* .category__icon */
   /* .category__title */
 }
@@ -486,7 +489,6 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
-  color: #212121;
   text-align: center;
 }
 
@@ -561,4 +563,64 @@
   .cities .city__title {
     font-size: 15px;
   }
+}
+
+.works {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  /* .works__title */
+  /* .works__wrapper */
+}
+.works__title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.29;
+  color: #212121;
+}
+@media screen and (max-width: 768.9px) {
+  .works__title {
+    font-size: 20px;
+  }
+}
+.works__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 32px;
+  align-items: stretch;
+}
+.works .work-info {
+  background-color: rgba(151, 202, 209, 0.08);
+  color: #212121;
+  border-radius: 8px;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 41px auto;
+  padding: 32px 24px 24px;
+  max-width: 580px;
+  /* .work-info__icon */
+  /* .work-info__title */
+  /* .work-info__text */
+  /* .work-info__link */
+}
+.works .work-info__icon {
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+.works .work-info__title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.works .work-info__text {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.works .work-info__link {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #00798a;
+  text-decoration: none;
 }/*# sourceMappingURL=home.css.map */

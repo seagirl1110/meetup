@@ -1,4 +1,6 @@
 @use "./../../../common-assets/styles/variables/mixins" as mixins;
+@use "./../../../common-assets/styles/variables/colors" as colors;
+@use "./../../../common-assets/styles/variables/variables" as variables;
 
 .main-container {
     @include mixins.flex-container-column(64px);
@@ -29,8 +31,8 @@
     /* .banner__content */
 
     &__content {
-        @include mixins.flex-container-column(24px);
-        color: #212121;
+        @include mixins.flex-container-column();
+        color: colors.$primary-color;
         max-width: 580px;
 
         @media screen and (max-width: 425.9px) {
@@ -64,7 +66,7 @@
     /* .banner__btn */
 
     &__btn {
-        @include mixins.btn(125px, 40px, #ffffff, #00798a);
+        @include mixins.btn(125px, 40px, #ffffff, colors.$action-color);
         font-size: 16px;
         line-height: 1.5;
         text-decoration: none;
@@ -82,7 +84,7 @@
 }
 
 .events {
-    @include mixins.flex-container-column(24px);
+    @include mixins.flex-container-column();
 
     /* .events__info */
 
@@ -99,7 +101,7 @@
     /* .events__btn-location */
 
     &__btn-location {
-        @include mixins.btn(auto, auto, #00798a, rgba(151, 202, 209, 0.12));
+        @include mixins.btn(auto, auto, colors.$action-color, rgba(151, 202, 209, 0.12));
         gap: 10px;
         padding: 10px 12px;
         font-size: 20px;
@@ -115,12 +117,8 @@
     /* .events__link */
 
     &__link {
+        @include mixins.link;
         margin-left: auto;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 1.5;
-        color: #00798a;
-        text-decoration: none;
 
         @media screen and (max-width: 644.9px) {
             display: none;
@@ -166,7 +164,7 @@
         &__img {
             width: 272px;
             height: 153px;
-            border-radius: 8px;
+            border-radius: variables.$br-radius;
 
             @media screen and (max-width: 644.9px) {
                 width: 98px;
@@ -193,7 +191,7 @@
             left: 10px;
             width: 106px;
             height: 20px;
-            border-radius: 4px;
+            border-radius: calc(variables.$br-radius / 2);
             background-color: #ffffff;
             color: #707070;
             font-size: 12px;
@@ -213,7 +211,7 @@
             font-size: 20px;
             font-weight: 600;
             line-height: 1.2;
-            color: #212121;
+            color: colors.$primary-color;
             padding-right: 28px;
 
             @media screen and (max-width: 644.9px) {
@@ -266,7 +264,7 @@
             font-size: 14px;
             line-height: 1.43;
             letter-spacing: -0.35px;
-            color: #212121;
+            color: colors.$primary-color;
 
             @media screen and (max-width: 644.9px) {
                 order: 1;
@@ -290,7 +288,7 @@
         &__cost {
             font-size: 16px;
             line-height: 1.5;
-            color: #212121;
+            color: colors.$primary-color;
         }
 
         /* .event__attendees */
@@ -319,11 +317,10 @@
 }
 
 .join {
+    @include mixins.color-container;
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 16px 57px;
-    color: #212121;
-    background-color: rgba(151, 202, 209, 0.08);
     padding: 20px 56px;
 
     @media screen and (max-width: 868.9px) {
@@ -400,7 +397,7 @@
 }
 
 .categories {
-    @include mixins.flex-container-column(24px);
+    @include mixins.flex-container-column();
 
     /* .categories__title */
 
@@ -416,12 +413,12 @@
     }
 
     .category {
+        @include mixins.color-container;
         @include mixins.flex-container-column(6px);
         align-items: center;
         width: 135px;
         height: 112px;
         padding: 22px 22px 11px;
-        background-color: rgba(151, 202, 209, 0.08);
 
         /* .category__icon */
 
@@ -436,7 +433,6 @@
             font-size: 16px;
             font-weight: 500;
             line-height: 1.5;
-            color: #212121;
             text-align: center;
         }
     }
@@ -472,7 +468,7 @@
     }
 
     .city {
-        @include mixins.flex-container-column(24px);
+        @include mixins.flex-container-column();
         align-items: center;
 
         /* .city:nth-child(n + 5) */
@@ -501,11 +497,65 @@
             font-size: 20px;
             font-weight: 600;
             line-height: 1.4;
-            color: #212121;
+            color: colors.$primary-color;
 
             @media screen and (max-width: 425.9px) {
                 font-size: 15px;
             }
+        }
+    }
+}
+
+.works {
+    @include mixins.flex-container-column();
+
+    /* .works__title */
+
+    &__title {
+        @include mixins.section-title;
+    }
+
+    /* .works__wrapper */
+
+    &__wrapper {
+        @include mixins.flex-container(12px 32px);
+        align-items: stretch;
+    }
+
+    .work-info {
+        @include mixins.color-container;
+        display: grid;
+        gap: 24px;
+        grid-template-columns: 41px auto;
+        padding: 32px 24px 24px;
+        max-width: 580px;
+
+        /* .work-info__icon */
+
+        &__icon {
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+
+        /* .work-info__title */
+
+        &__title {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* .work-info__text */
+
+        &__text {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* .work-info__link */
+
+        &__link {
+            @include mixins.link;
         }
     }
 }

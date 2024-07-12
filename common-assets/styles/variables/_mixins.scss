@@ -1,3 +1,6 @@
+@use "./colors" as colors;
+@use "./variables" as variables;
+
 @mixin flex-container($gap: 0, $justify: center) {
     display: flex;
     align-items: center;
@@ -5,10 +8,16 @@
     gap: $gap;
 }
 
-@mixin flex-container-column($gap: 5px) {
+@mixin flex-container-column($gap: 24px) {
     display: flex;
     flex-direction: column;
     gap: $gap;
+}
+
+@mixin color-container {
+    background-color: colors.$bg-primary-color;
+    color: colors.$primary-color;
+    border-radius: variables.$br-radius;
 }
 
 @mixin btn($width, $height, $color, $bg-color) {
@@ -16,7 +25,7 @@
     border: none;
     outline: none;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: variables.$br-radius;
     width: $width;
     height: $height;
     color: $color;
@@ -27,9 +36,17 @@
     font-size: 28px;
     font-weight: 600;
     line-height: 1.29;
-    color: #212121;
+    color: colors.$primary-color;
 
     @media screen and (max-width: 768.9px) {
         font-size: 20px;
     }
+}
+
+@mixin link {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: colors.$action-color;
+    text-decoration: none;
 }

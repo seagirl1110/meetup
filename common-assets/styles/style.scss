@@ -1,4 +1,6 @@
 @use "./variables/mixins" as mixins;
+@use "./variables/colors" as colors;
+@use "./variables/variables" as variables;
 
 * {
     margin: 0;
@@ -69,7 +71,7 @@
         /* .search-form__input-events */
 
         &__input-events {
-            border-radius: 8px 0px 0px 8px;
+            border-radius: variables.$br-radius 0px 0px variables.$br-radius;
             background-image: url("./../icons/header_search_events.svg");
             background-repeat: no-repeat;
             background-position: 10px 10px;
@@ -101,7 +103,7 @@
 
         &__btn-submit {
             @include mixins.btn(42px, 42px, #ffffff, #f65858);
-            border-radius: 0px 8px 8px 0px;
+            border-radius: 0px variables.$br-radius variables.$br-radius 0px;
             flex-shrink: 0;
 
             @media screen and (max-width: 545.9px) {
@@ -113,7 +115,7 @@
     .actions {
         @include mixins.flex-container(22px);
 
-        @mixin actions-btn($color: #212121, $bg-color: #ffffff) {
+        @mixin actions-btn($color: colors.$primary-color, $bg-color: #ffffff) {
             @include mixins.btn(auto, 36px, $color, $bg-color);
             padding: 8px 0;
             gap: 4px;
@@ -128,7 +130,7 @@
         }
 
         .btn-signUp {
-            @include actions-btn(#ffffff, #00798a);
+            @include actions-btn(#ffffff, colors.$action-color);
             padding-left: 16px;
             padding-right: 16px;
         }
