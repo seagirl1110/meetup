@@ -4,12 +4,12 @@
   gap: 64px;
   width: 100%;
   max-width: 1244px;
-  padding: 0 24px;
+  padding: 0 24px 53px;
   margin: 0 auto;
 }
 @media screen and (max-width: 425.9px) {
   .main-container {
-    padding: 0 15px;
+    padding: 0 15px 125px;
     gap: 20px;
   }
 }
