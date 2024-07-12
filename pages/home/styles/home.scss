@@ -66,7 +66,7 @@
     /* .banner__btn */
 
     &__btn {
-        @include mixins.btn(125px, 40px, #ffffff, colors.$action-color);
+        @include mixins.btn(125px, 40px, colors.$white, colors.$action-color);
         font-size: 16px;
         line-height: 1.5;
         text-decoration: none;
@@ -146,7 +146,7 @@
             flex-direction: row;
             width: 100%;
             height: auto;
-            border-top: 1px solid #d9d9d9;
+            border-top: 1px solid colors.$light-gray;
             padding: 10px 0;
             gap: 8px;
         }
@@ -192,8 +192,8 @@
             width: 106px;
             height: 20px;
             border-radius: calc(variables.$br-radius / 2);
-            background-color: #ffffff;
-            color: #707070;
+            background-color: colors.$white;
+            color: colors.$gray;
             font-size: 12px;
             font-weight: 500;
 
@@ -228,7 +228,7 @@
             font-size: 14px;
             font-weight: 500;
             line-height: 1.43;
-            color: #707070;
+            color: colors.$gray;
 
             @media screen and (max-width: 644.9px) {
                 order: 3;
@@ -296,7 +296,7 @@
         &__attendees {
             @media screen and (max-width: 644.9px) {
                 font-size: 9px;
-                color: #707070;
+                color: colors.$gray;
             }
 
             img {
@@ -360,7 +360,7 @@
     /* .join__btn */
 
     &__btn {
-        @include mixins.btn(192px, 40px, #ffffff, #e32359);
+        @include mixins.btn(192px, 40px, colors.$white, #e32359);
         font-size: 16px;
         font-weight: 500;
         line-height: 1.5;
@@ -452,7 +452,7 @@
     &__text {
         font-size: 16px;
         line-height: 24px;
-        color: #707070;
+        color: colors.$gray;
 
         @media screen and (max-width: 425.9px) {
             font-size: 12px;

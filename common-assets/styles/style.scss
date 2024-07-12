@@ -56,15 +56,15 @@
         &__input-events,
         &__input-location {
             @include form-text;
-            border: 1px solid #d9d9d9;
+            border: 1px solid colors.$light-gray;
             outline: none;
             padding: 13px 17px;
             height: 42px;
-            color: #000000;
+            color: colors.$black;
 
             &::placeholder {
                 @include form-text;
-                color: #707070;
+                color: colors.$gray;
             }
         }
 
@@ -102,7 +102,7 @@
         /* .search-form__btn-submit */
 
         &__btn-submit {
-            @include mixins.btn(42px, 42px, #ffffff, #f65858);
+            @include mixins.btn(42px, 42px, colors.$white, #f65858);
             border-radius: 0px variables.$br-radius variables.$br-radius 0px;
             flex-shrink: 0;
 
@@ -115,7 +115,7 @@
     .actions {
         @include mixins.flex-container(22px);
 
-        @mixin actions-btn($color: colors.$primary-color, $bg-color: #ffffff) {
+        @mixin actions-btn($color: colors.$primary-color, $bg-color: colors.$white) {
             @include mixins.btn(auto, 36px, $color, $bg-color);
             padding: 8px 0;
             gap: 4px;
@@ -130,7 +130,7 @@
         }
 
         .btn-signUp {
-            @include actions-btn(#ffffff, colors.$action-color);
+            @include actions-btn(colors.$white, colors.$action-color);
             padding-left: 16px;
             padding-right: 16px;
         }
