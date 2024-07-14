@@ -205,6 +205,14 @@
             gap: 8px;
         }
 
+        /* .event:nth-child(n + 4) */
+
+        &:nth-child(n + 4) {
+            @media screen and (max-width: 644.9px) {
+                display: none;
+            }
+        }
+
         /* .event__img */
 
         &__img {

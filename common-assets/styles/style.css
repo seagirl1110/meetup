@@ -258,6 +258,7 @@
   position: relative;
   width: 272px;
   height: 399px;
+  /* .event:nth-child(n + 4) */
   /* .event__img */
   /* .event__content */
   /* .event__type */
@@ -283,6 +284,11 @@
     border-top: 1px solid #d9d9d9;
     padding: 10px 0;
     gap: 8px;
+  }
+}
+@media screen and (max-width: 644.9px) {
+  .events .event:nth-child(n+4) {
+    display: none;
   }
 }
 .events .event__img {

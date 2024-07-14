@@ -83,16 +83,6 @@
     }
 }
 
-.event {
-    /* .event:nth-child(n + 4) */
-
-    &:nth-child(n + 4) {
-        @media screen and (max-width: 644.9px) {
-            display: none;
-        }
-    }
-}
-
 .join {
     @include mixins.color-container;
     display: grid;

@@ -94,15 +94,6 @@
   }
 }
 
-.event {
-  /* .event:nth-child(n + 4) */
-}
-@media screen and (max-width: 644.9px) {
-  .event:nth-child(n+4) {
-    display: none;
-  }
-}
-
 .join {
   background-color: rgba(151, 202, 209, 0.08);
   color: #212121;
