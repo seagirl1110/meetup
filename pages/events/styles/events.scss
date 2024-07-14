@@ -1,0 +1,54 @@
+@use "./../../../common-assets/styles/variables/colors" as colors;
+@use "./../../../common-assets/styles/variables/mixins" as mixins;
+@use "./../../../common-assets/styles/variables/variables" as variables;
+
+.map {
+    color: colors.$primary-color;
+
+    /* .map__subtitle */
+
+    &__subtitle {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.33;
+    }
+
+    /* .map__title */
+
+    &__title {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.4;
+    }
+
+    /* .map__wrapper */
+
+    &__wrapper {
+        @include mixins.flex-container();
+        width: 350px;
+        height: 285px;
+        background-image: url("./../assets/images/map.png");
+        background-size: contain;
+        position: relative;
+        border-radius: calc(variables.$br-radius * 1.5);
+        margin-top: 14px;
+    }
+
+    /* .map__btn */
+
+    &__btn {
+        @include mixins.btn(173px, 41px, colors.$action-color, colors.$white);
+        gap: 8px;
+        font-size: 14px;
+        line-height: 1.43;
+        border: 2px solid colors.$action-color;
+    }
+
+    /* .map__close */
+
+    &__close {
+        position: absolute;
+        top: 11px;
+        right: 15px;
+    }
+}
