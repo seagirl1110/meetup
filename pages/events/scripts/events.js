@@ -11,6 +11,37 @@ const createEl = (tag, className, text) => {
   return element;
 };
 
+const createDate = (date) => {
+  const weekday = date.toLocaleString('en-US', {
+    weekday: 'short',
+  });
+
+  console.dir(date.toString());
+
+  const month = date.toLocaleString('en-US', { month: 'short' });
+  const day = date.getUTCDate();
+
+  let meridiem = 'AM';
+  let hour = date.getHours();
+  if (hour > 12) {
+    hour -= 12;
+    meridiem = 'pm';
+  }
+  if (hour.toString().length < 2) {
+    hour = `0${hour}`;
+  }
+
+  let minute = date.getMinutes();
+  if (minute.toString().length < 2) {
+    minute = `${minute}0`;
+  }
+
+  const resultDate =
+    `${weekday}, ${month} ${day} · ${hour}:${minute} ${meridiem} UTC`.toUpperCase();
+  console.log(resultDate);
+  return resultDate;
+};
+
 const createEvent = (event) => {
   const eventElement = createEl('div', 'event');
 
@@ -21,7 +52,9 @@ const createEvent = (event) => {
   const content = createEl('div', 'event__content');
   eventElement.append(img, content);
 
-  const date = createEl('p', 'event__date', event.date);
+  const dateValue = createDate(event.date);
+
+  const date = createEl('p', 'event__date', dateValue);
 
   const title = createEl('h3', 'event__title', event.title);
 
