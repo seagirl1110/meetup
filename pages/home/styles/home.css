@@ -1,11 +1,10 @@
 .main-container {
+  max-width: 1244px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 64px;
-  width: 100%;
-  max-width: 1244px;
   padding: 0 24px 53px;
-  margin: 0 auto;
 }
 @media screen and (max-width: 425.9px) {
   .main-container {

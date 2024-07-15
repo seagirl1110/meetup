@@ -3,11 +3,9 @@
 @use "./../../../common-assets/styles/variables/variables" as variables;
 
 .main-container {
+    @include mixins.center-container(1244px);
     @include mixins.flex-container-column(64px);
-    width: 100%;
-    max-width: 1244px;
     padding: 0 24px 53px;
-    margin: 0 auto;
 
     @media screen and (max-width: 425.9px) {
         padding: 0 15px 125px;

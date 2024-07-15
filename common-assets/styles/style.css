@@ -8,6 +8,8 @@
 }
 
 .header {
+  max-width: 1512px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -435,18 +437,20 @@
 }
 
 .footer {
+  max-width: 1512px;
+  margin: 0 auto;
   background-color: #212121;
   /* .footer__join */
   /* .footer__text */
   /* .footer__btn */
 }
 .footer .footer__wrapper {
+  max-width: 1168px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  max-width: 1168px;
   padding: 24px 24px 40px;
-  margin: 0 auto;
 }
 @media screen and (max-width: 425.9px) {
   .footer .footer__wrapper {

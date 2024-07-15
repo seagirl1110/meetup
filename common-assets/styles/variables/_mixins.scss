@@ -1,6 +1,11 @@
 @use "./colors" as colors;
 @use "./variables" as variables;
 
+@mixin center-container($max-width: 1512px) {
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
 @mixin flex-container($gap: 0, $justify: center) {
     display: flex;
     align-items: center;

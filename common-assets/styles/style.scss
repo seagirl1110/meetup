@@ -12,6 +12,7 @@
 }
 
 .header {
+    @include mixins.center-container();
     @include mixins.flex-container(15px 40px, space-between);
     flex-wrap: wrap;
     padding: 11px 50px 11px 24px;
@@ -382,6 +383,7 @@
 }
 
 .footer {
+    @include mixins.center-container();
     background-color: colors.$primary-color;
 
     @mixin footer-title {
@@ -391,10 +393,9 @@
     }
 
     .footer__wrapper {
+        @include mixins.center-container(1168px);
         @include mixins.flex-container-column;
-        max-width: 1168px;
         padding: 24px 24px 40px;
-        margin: 0 auto;
 
         @media screen and (max-width: 425.9px) {
             padding: 20px 7px 36px 18px;
