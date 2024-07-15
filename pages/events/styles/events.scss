@@ -2,8 +2,19 @@
 @use "./../../../common-assets/styles/variables/mixins" as mixins;
 @use "./../../../common-assets/styles/variables/variables" as variables;
 
+.main-container {
+    @include mixins.center-container(1269px);
+    @include mixins.flex-container(10px, space-between);
+    align-items: start;
+    padding: 77px 24px 101px;
+}
+
 .map {
     color: colors.$primary-color;
+
+    @media screen and (max-width: 1024.9px) {
+        display: none;
+    }
 
     /* .map__subtitle */
 
@@ -51,5 +62,72 @@
         top: 11px;
         right: 15px;
         cursor: pointer;
+    }
+}
+
+.events {
+    /* .events__link-main */
+
+    &__link-main {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.4;
+        color: colors.$action-color;
+    }
+
+    /* .events__list */
+
+    &__list {
+        flex-direction: column;
+    }
+
+    .event {
+        flex-direction: row;
+        width: 604px;
+        height: auto;
+        border-top: 1px solid colors.$light-gray;
+        padding-top: 16px;
+
+        /* .event__img */
+
+        &__img {
+            width: 160px;
+            height: 90px;
+            flex-shrink: 0;
+        }
+
+        /* .event__content */
+
+        &__content {
+            gap: 3px;
+        }
+
+        /* .event__type */
+
+        &__type {
+            top: 24px;
+        }
+
+        /* .event__title */
+
+        &__title {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5;
+            padding: 0;
+        }
+
+        /* .event__attendees */
+
+        &__wrapper-attendees {
+            margin-top: 28px;
+        }
+
+        /* .event__attendees */
+
+        &__attendees {
+            font-size: 14px;
+            line-height: 1.43;
+        }
     }
 }
