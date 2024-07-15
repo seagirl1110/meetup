@@ -16,8 +16,6 @@ const createDate = (date) => {
     weekday: 'short',
   });
 
-  console.dir(date.toString());
-
   const month = date.toLocaleString('en-US', { month: 'short' });
   const day = date.getUTCDate();
 
@@ -38,7 +36,6 @@ const createDate = (date) => {
 
   const resultDate =
     `${weekday}, ${month} ${day} · ${hour}:${minute} ${meridiem} UTC`.toUpperCase();
-  console.log(resultDate);
   return resultDate;
 };
 
