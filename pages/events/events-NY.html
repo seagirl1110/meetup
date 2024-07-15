@@ -60,7 +60,39 @@
       <section class="events">
         <h2 class="events__title">Events near New York, NY</h2>
         <a href="" class="events__link-main">Events</a>
-        <div class="events__filter"></div>
+        <div class="events__filter-wrapper">
+          <select name="events-type" data-events="type" class="events__filter">
+            <option value="any">Any type</option>
+            <option value="online">Online</option>
+            <option value="offline">Offline</option>
+          </select>
+          <select
+            name="events-distance"
+            data-events="distance"
+            class="events__filter"
+          >
+            <option value="any">Any distance</option>
+            <option value="5">5 km</option>
+            <option value="10">10 km</option>
+            <option value="15">15 km</option>
+            <option value="25">25 km</option>
+            <option value="50">50 km</option>
+            <option value="75">75 km</option>
+            <option value="100">100 km</option>
+          </select>
+          <select
+            name="events-category"
+            data-events="category"
+            class="events__filter"
+          >
+            <option value="any">Any category</option>
+            <option value="Social Activities">Social Activities</option>
+            <option value="Hobbies and Passions">Hobbies and Passions</option>
+            <option value="Health and Wellbeing">Health and Wellbeing</option>
+            <option value="Business">Business</option>
+            <option value="Technology">Technology</option>
+          </select>
+        </div>
         <div class="events__list"></div>
       </section>
       <article class="map">

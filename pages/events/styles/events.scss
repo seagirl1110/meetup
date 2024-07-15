@@ -7,6 +7,10 @@
     @include mixins.flex-container(10px, space-between);
     align-items: start;
     padding: 77px 24px 101px;
+
+    @media screen and (max-width: 644.9px) {
+        padding: 18px 12px 68px;
+    }
 }
 
 .map {
@@ -66,6 +70,8 @@
 }
 
 .events {
+    gap: 12px;
+
     /* .events__link-main */
 
     &__link-main {
@@ -73,6 +79,44 @@
         font-weight: 500;
         line-height: 1.4;
         color: colors.$action-color;
+        margin-top: 4px;
+    }
+
+    /* .events__filter-wrapper */
+
+    &__filter-wrapper {
+        @include mixins.flex-container(18px, start);
+        margin-bottom: 28px;
+
+        @media screen and (max-width: 644.9px) {
+            gap: 8px;
+        }
+    }
+
+    /* .events__filter */
+
+    &__filter {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 14px;
+        border: none;
+        outline: none;
+        border-radius: calc(variables.$br-radius * 5);
+        padding: 12px 30px 12px 10px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 14px;
+        color: colors.$primary-color;
+        background-color: colors.$white2;
+        color: colors.$primary-color;
+        appearance: none;
+        background-image: url("./../assets/icons/filter.svg");
+        background-repeat: no-repeat;
+        background-position: center right 8px;
+
+        @media screen and (max-width: 644.9px) {
+            font-size: 12px;
+        }
     }
 
     /* .events__list */
@@ -83,7 +127,8 @@
 
     .event {
         flex-direction: row;
-        width: 604px;
+        width: 100%;
+        max-width: 604px;
         height: auto;
         border-top: 1px solid colors.$light-gray;
         padding-top: 16px;
@@ -128,6 +173,10 @@
         &__attendees {
             font-size: 14px;
             line-height: 1.43;
+
+            @media screen and (max-width: 644.9px) {
+                font-size: 9px;
+            }
         }
     }
 }

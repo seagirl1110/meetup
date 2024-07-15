@@ -55,6 +55,7 @@ const createEvent = (event) => {
 };
 
 const renderEvents = (events) => {
+  eventsContainer.innerHTML = '';
   const eventElementColl = events.map((event) => {
     return createEvent(event);
   });
@@ -62,3 +63,31 @@ const renderEvents = (events) => {
 };
 
 renderEvents(eventsStore);
+
+// ===== events filter ======
+
+const filtersColl = document.querySelectorAll('.events__filter');
+
+filtersColl.forEach((item) => {
+  item.addEventListener('change', (evt) => {
+    const selectedElem = evt.target;
+    const selectedKey = selectedElem.dataset.events;
+    const selectedValue = selectedElem.selectedOptions[0].value;
+
+    let filteredEvents;
+
+    if (selectedValue === 'any') {
+      filteredEvents = eventsStore;
+    } else if (selectedKey === 'distance') {
+      filteredEvents = eventsStore.filter(
+        (event) => event.distance <= selectedValue
+      );
+    } else {
+      filteredEvents = eventsStore.filter(
+        (event) => event[selectedKey] === selectedValue
+      );
+    }
+
+    renderEvents(filteredEvents);
+  });
+});
